@@ -229,7 +229,7 @@ header{
 
 .underline1,
 .underline2{
-    width: 150px;
+    width: 120px;
     margin: -6px 0 0 0;
     border-radius: 10px;
 }
@@ -263,21 +263,21 @@ header{
 }
 
 .transform-img{
-    background-image: url(./images/desktop/image-transform.jpg);
+    background-image: url(./images/mobile/image-transform.jpg);
 }
 
 .standout-img{
-    background-image: url(./images/desktop/image-stand-out.jpg)
+    background-image: url(./images/mobile/image-stand-out.jpg)
 }
 
 .graphic__container{
-    background-image: url(./images/desktop/image-graphic-design.jpg);
-    background-position: top;
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+    background-position: center;
 }
 
 .photography__container{
-    background-image: url(./images/desktop/image-photography.jpg);
-    background-position: top;
+    background-image: url(./images/mobile/image-photography.jpg);
+    background-position: center;
 }
 
 .graphic-text,
@@ -324,9 +324,28 @@ header{
     display: flex;
 }
 
-.image-gallery img{
+.gallery-img{
     width: 50%; /*changed*/
     height: 200px; /*changed*/ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.milkbottles{
+    background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+}
+
+.orange{
+    background-image: url(./images/mobile/image-gallery-orange.jpg);
+}
+
+.cone{
+    background-image: url(./images/mobile/image-gallery-cone.jpg);
+}
+
+.sugarcubes{
+    background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
 }
 
 /* Client - testimonial__section */
@@ -422,7 +441,9 @@ footer h3{
     color: hsl(0, 0%, 100%);
 }
 
-
+.social-media a:not(last-child){
+    margin-right: 15px;
+}
 .social-media .svg:hover{
     transition: all 0.3s linear;
     filter: brightness(0) invert(1);
@@ -523,11 +544,10 @@ footer h3{
 
     .underline1,
     .underline2{
-        width: 142px;    /*change*/
+        width: 115px;    /*change*/
         margin: -6px 0 0 -4px;   /*change*/
     }
 
-        
     .transform-img,
     .standout-img,
     .graphic__container,
@@ -558,6 +578,24 @@ footer h3{
         width: 50%;
         height: 500px;
         text-align: left;
+    }
+
+    .transform-img{
+        background-image: url(./images/desktop/image-transform.jpg);
+    }
+    
+    .standout-img{
+        background-image: url(./images/desktop/image-stand-out.jpg)
+    }
+    
+    .graphic__container{
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        background-position: top;
+    }
+    
+    .photography__container{
+        background-image: url(./images/desktop/image-photography.jpg);
+        background-position: top;
     }
   
     .transform-text,
@@ -607,9 +645,25 @@ footer h3{
         width: 50%;
     }
 
-    .image-gallery img{
+    .gallery-img{
         width: 50%; /*changed*/
         height: 400px; /*changed*/ 
+    }
+
+    .milkbottles{
+        background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    }
+    
+    .orange{
+        background-image: url(./images/desktop/image-gallery-orange.jpg);
+    }
+    
+    .cone{
+        background-image: url(./images/desktop/image-gallery-cone.jpg);
+    }
+    
+    .sugarcubes{
+        background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
     }
 
     .client-testimonial{
