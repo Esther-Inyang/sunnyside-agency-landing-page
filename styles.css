@@ -1,4 +1,6 @@
-/********GENERAL STYLES******/
+
+
+/********GLOBAL STYLES******/
 
 *{
     box-sizing: border-box;
@@ -29,196 +31,542 @@ body{
 h1,
 h2,
 h3{
-    font-family: 'Fraunces', serif;;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
 }
 
 /* Header - section */
 header{
     width: 100%;
     height: 95vh;
-    padding: 15px;
+    padding: 15px 0; /*change*/
     background-image: url(./images/desktop/image-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.header-nav{
+    padding: 0 30px;
+}
 
-.brand-name{
-    color: hsl(0, 0%, 100%);
-    font-size: 20px;
-    letter-spacing: 2px;
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px 0;
 }
 
 /* Nav Menu */
+.nav-menu{
+ height: 0;
+ overflow: hidden;
+ /* display: none; */
+} 
+
+/* for JavaScript */
+.show-nav {
+    height: 240px;
+  }
+
+.pointer-container{
+    width: 100%;
+    height: 30px;
+}
+
+.menu-pointer{
+    width: 20px;
+    height: 20px;
+    /* margin-left: 93.6%; */
+    margin-left: auto;
+    margin-right: 0;     /*to position this div to the right*/
+    background-image: linear-gradient(to bottom right, transparent 50%, white 0);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 .menu{
-    list-style-type: none;
+    padding: 20px 0;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .menu li{
-    display: inline-block;  
+    list-style-type: none;
+    text-align: center;
 }
 
 .menu li a{
+    display: block;
     font-size: 15px;
-    font-weight: 200;
     text-decoration: none;  
-    color: hsl(0, 0%, 100%);
+    color: hsl(212, 27%, 19%);
+    padding: 12px 10px;
 }
 
 .menu li a:hover{
-    transition: .3s;
-    color:hsl(0, 0%, 100%, .7)
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+    transition: all .3s ease-in;
 }
 
 .menu .contact{
-    background-color:hsl(0, 0%, 100%);
-    border-radius: 20px;
-    padding: 12px 18px;
-}
-
-.menu .contact:hover{
-    transition: .4s ease;
-    background-color: hsl(0, 0%, 100%, 0.3);
+    padding: 12px;
+    border-radius: 20px;  /*changed*/
 }
 
 .menu .contact a{
+    width: 150px;
+    font-weight: 600;
     color: hsl(212, 27%, 19%);
     text-transform: uppercase;
+    background-color:hsl(51, 100%, 49%);
+    margin: 0 auto;
+    border-radius: 30px;
 }
 
-.menu .contact:hover a{
-    color: hsl(0, 0%, 100%);
+.menu .contact a:hover{
+    transition: .4s ease;
+    color: hsl(212, 27%, 19%);  
+    background-color: hsl(51, 100%, 49%,0.5);
 }
+
+.nav-toggle {
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+    background: transparent;
+    border-color: transparent;
+    transition: all .3s linear;
+    cursor: pointer;
+  }
+
+  .nav-toggle:hover {
+    color: hsl(0, 0%, 100%,0.5);
+    transform: rotate(90deg);
+  }
 
 /* nav menu - ends */
 
 .creatives{
     font-weight: 900;
-    font-size: 22px;
+    font-size: 20px; /*changed*/
     text-align: center;
     color: hsl(0, 0%, 100%);
-    margin-top: 70px;
+    margin: 60px 0 20px 0;   /*changed*/
     text-transform: uppercase;
     letter-spacing: 5px;
     word-spacing: 10px;
 }
 
 .arrow-down{
+    width: 100px;
+    height: 170px;
+    margin-top: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(./images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+} 
+
+/* services */
+.services-section{
+    width: 100%;
+}
+
+.services-section .row1{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.transform__container,
+.standout__container{ 
+    width: 100%;  /*changed*/
+    height: 400px;  /*changed*/
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    background-color: hsl(0, 0%, 100%);
 }
 
-.arrow-down img{
-    width: 25px;
-    height: 100px;
+.transform-text,
+.standout-text{
+    width: 85%;
 }
 
-/******FROM 375px - 995px******/
-@media screen and (min-width: 375px) {
+.transform-text p,
+.standout-text p{
+    margin: 20px 0;
+    line-height: 30px;
+    color: hsl(212, 27%, 19%, .8);
+}
+
+.transform-text h2,
+.standout-text h2{
+    color: hsl(212, 27%, 19%);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.transform-text .learn-more,
+.standout-text .learn-more{
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.learn-moreDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.underline1,
+.underline2{
+    width: 150px;
+    margin: -6px 0 0 0;
+    border-radius: 10px;
+}
+
+.underline1{
+    border-top: 7px solid hsl(51, 100%, 49%, 0.6); 
+}
+
+.underline2{  
+    border-top: 7px solid hsl(7, 99%, 70%, 0.6); 
+}
+
+.transform-img,
+.standout-img{
+    height: 400px; /*changed*/
+}
+
+.graphic__container,
+.photography__container{
+    height: 600px;
+}
+
+.transform-img,
+.standout-img,
+.graphic__container,
+.photography__container{
+    width: 100%; /*changed*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.transform-img{
+    background-image: url(./images/desktop/image-transform.jpg);
+}
+
+.standout-img{
+    background-image: url(./images/desktop/image-stand-out.jpg)
+}
+
+.graphic__container{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-position: top;
+}
+
+.photography__container{
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-position: top;
+}
+
+.graphic-text,
+.photography-text{
+    margin: 0 auto; /*changed*/
+    padding-top: 350px;  /*changed*/
+    width: 60%;  
+    text-align: center;
+}
+
+.graphic-text h2,
+.photography-text h2{
+    margin: 20px 0 20px 0; /*changed*/
+    color: hsl(212, 27%, 19%);
+}
+
+.transform-text p,
+.standout-text p,
+.graphic-text p,
+.photography-text p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.graphic-text p,
+.photography-text p{
+    line-height: 25px; /*changed*/
+    margin: 10px 0;  /*changed*/
+}
+
+.graphic-text p{
+    color: hsl(167, 40%, 24%);
+}
+
+.photography-text{
+    color: hsl(198, 62%, 26%);
+}
+
+/* Image-Gallery__Section */
+
+.gallery1-2,
+.gallery3-4{
+    width: 100%;
+    display: flex;
+}
+
+.image-gallery img{
+    width: 50%; /*changed*/
+    height: 200px; /*changed*/ 
+}
+
+/* Client - testimonial__section */
+.testimonial__section{
+    width: 100%;
+    height: auto; /*changed*/
+    padding: 25px; /*changed*/
+    /* height: auto; */
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+.client-testimonial{
+    color: hsl(210, 4%, 67%);
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 30px; /*changed*/
+    margin: 30px 0 40px 0;
+}
+
+.clients{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.client-img{
+    width: 50px; /*changed*/
+    height: 50px; /*changed*/
+    border-radius: 50%;
+    /* margin-top: 10px; */
+}
+
+.client1,
+.client2,
+.client3{
+    width: 100%;
+    height: auto;  /*changed*/
+    margin: 20px 0; /*changed*/
+    border: 1px solid hsl(210, 4%, 67%,0.2);
+    padding: 30px;
+    border-radius: 100%;
+}
+
+.client-text{
+    margin-top: 20px;
+    line-height: 30px; /*changed*/
+    color: hsl(213, 9%, 39%);
+}
+
+.client-name{
+    font-size: 30px;
+    margin-top: 30px;
+    color: hsl(212, 27%, 19%);
+}
+
+.client-position{
+    font-size: 14px;
+    color: hsl(210, 4%, 67%);
+}
+
+
+/*footer-section*/
+
+footer{
+    width: 100%;
+    height: 300px; 
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(74, 197, 172, 0.6);
+}
+
+footer h3{
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 50px;
+    color: hsl(168, 34%, 41%);
+}
+
+.footer-menu a{
+    margin: 0 10px;
+    color: hsl(168, 34%, 41%);
+    text-decoration: none;
+}
+
+.footer-menu a:hover{
+    transition: all 0.3s ease-in;
+    color: hsl(0, 0%, 100%);
+}
+
+
+.social-media .svg:hover{
+    transition: all 0.3s linear;
+    filter: brightness(0) invert(1);
+}
     
-}
-
 /******FROM 995px - 1440px******/
 @media screen and (min-width: 995px) {
-    nav{
+    header{
+        padding: 15px;
+    }
+
+    .header-nav{
         display: flex;
         justify-content: space-between;
         align-items:flex-start;
-        padding: 20px;
+        padding: 0;
     }
 
-    .brand-name{
-        font-size: 30px;
+    .menu-pointer{
+        display: none;
+    }
+
+    .logo-container{
+        display: block;
+        padding: 0;
+    }
+
+    .logo{
+        margin-top: 20px;
+    }
+
+    .nav-menu{
+        width: auto;
+        height: 60px;
+    }
+    /*
+    .nav-menu{
+        height: 0;
+        overflow: hidden;
+       }  */
+   
+    .menu{
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    .menu li a:hover{
+        color:hsl(0, 0%, 100%, .7);
+        background-color: none;
     }
 
     .menu li{
         margin-left: 30px;
+        text-align: left;
+        display: inline-block;  
     }
 
-    /* services */
-    .services-section{
-        width: 100%;
+    .menu li a{
+        color: hsl(0, 0%, 100%);
+        background-color: none;
+    }
+
+    .menu li a:hover{
+        font-weight: 200;
+    }
+
+    .menu .contact a{
+        width: 110px;
+        margin: 0;
+        text-align: center;
+        background-color:hsl(0, 0%, 100%);
+    }
+
+    .menu .contact:hover a{
+        transition: .4s ease;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 100%,0.4);
+    }
+
+    .nav-toggle{
+        display: none; 
+    }
+
+    .creatives{
+        font-size: 22px;
+        margin-top: 80px;
+    }
+
+    .arrow-down{
+        margin-top: 50px;
+    }
+   
+    .learn-moreDiv{
+        align-items: flex-start; /*change*/
+    }
+
+    .underline1,
+    .underline2{
+        width: 142px;    /*change*/
+        margin: -6px 0 0 -4px;   /*change*/
+    }
+
+        
+    .transform-img,
+    .standout-img,
+    .graphic__container,
+    .photography__container{
+        width: 100%; /*changed*/
+        height: 500px; /*changed*/
     }
 
     .services-section .row{
         display: flex;
     }
 
-    .transform__container,
-    .standout__container{
-        width: 50%;
-        height: 500px;
-        background-color: hsl(0, 0%, 100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
+    .services-section .row1{
+        /* display: block; */
+        flex-direction: row;
     }
-
-    .transform-text,
-    .standout-text{
-        width: 54%;
-    }
-
-    .transform-text p,
-    .standout-text p{
-        margin: 20px 0;
-        line-height: 25px;
-        color: hsl(212, 27%, 19%, .8);
-    }
-
-    .transform-text h2,
-    .standout-text h2{
-        color: hsl(212, 27%, 19%);
-        font-weight: 900;
-        font-size: 40px;
-    }
-
-    .transform-text .learn-more,
-    .standout-text .learn-more{
-        text-decoration: none;
-        color: hsl(212, 27%, 19%);
-        font-weight: 900;
-        font-size: 18px;
-        text-transform: uppercase;
-    }
-
-    .underline{
-        width: 120px;
-        border-top: 7px solid hsl(51, 100%, 49%, 0.5);
-        margin: -5px 0 0 -5px;
-        border-radius: 10px;
-    }
-
+        
     .transform-img,
     .standout-img,
     .graphic__container,
     .photography__container{
+        width: 50%; /*changed*/
+    }
+
+    .transform__container,
+    .standout__container{
         width: 50%;
         height: 500px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        text-align: left;
     }
-
-    .transform-img{
-        background-image: url(./images/desktop/image-transform.jpg);
+  
+    .transform-text,
+    .standout-text{
+        width: 50%;
     }
-
-    .standout-img{
-        background-image: url(./images/desktop/image-stand-out.jpg)
-    }
-
-    .graphic__container{
-        background-image: url(./images/desktop/image-graphic-design.jpg);
-        background-position: top;
-    }
-
-    .photography__container{
-        background-image: url(./images/desktop/image-photography.jpg);
-        background-position: top;
+    
+    .transform-text h2,
+    .standout-text h2{
+        line-height: 45px; /*changed*/
     }
 
     .graphic__container,
@@ -231,55 +579,43 @@ header{
 
     .graphic-text,
     .photography-text{
-        width: 60%;
-        text-align: center;
-        margin-top: 280px;    
+        width: 50%;   /*changed*/
+        margin: 280px 0 0 0;    /*changed*/
+        padding-top: 0;
     }
 
     .graphic-text h2,
     .photography-text h2{
-        margin: 50px 0 5px 0;
-        color: hsl(212, 27%, 19%);
+        margin: 0 0 5px 0; /*changed*/
     }
 
-    .transform-text,
-    .standout-text p,
-    .graphic-text p,
-    .photography-text p{
-        font-size: 15px;
-        font-weight: 600;
+    .graphic-text h2,
+    .photography-text h2{
+        margin: 40px 0 20px 0; /*changed*/
     }
 
-    .graphic-text p,
-    .photography-text p{
-        line-height: 25px;
-        margin: 20px 0;
-    }
-
-    .graphic-text p{
-        color: hsl(167, 40%, 24%);
-    }
-
-    .photography-text{
-        color: hsl(198, 62%, 26%);
-    }
-
-    /* Image-Gallery-Section */
     .image-gallery{
         width: 100%;
-        height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
+    }
+
+    .gallery1-2,
+    .gallery3-4{
+        width: 50%;
     }
 
     .image-gallery img{
-        width: 30%;
-        height: 350px;
+        width: 50%; /*changed*/
+        height: 400px; /*changed*/ 
     }
 
-    /* Client - testimonial__section */
+    .client-testimonial{
+        font-size: 40px; /*changed*/
+        margin: 0;
+    }
+
     .testimonial__section{
         width: 100%;
         height: 600px;
@@ -292,95 +628,50 @@ header{
         flex-direction: column;
     }
 
-    .client-testimonial{
-        color: hsl(210, 4%, 67%);
-        letter-spacing: 3px;
-        font-weight: 700;
-        font-size: 30px;
-    }
-
     .clients{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
     .client-img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
+        width: 100px; /*changed*/
+        height: 100px; /*changed*/
     }
 
     .client1,
     .client2,
     .client3{
-        width: 100%;
-        height: 300px;
+        width: 33.333%;
+        height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         text-align: center;
         margin: 0 30px;
+        padding: 30px;
+        border: none;
     }
-
+  
     .client-text{
-        margin-top: 20px;
-        line-height: 30px;
-        color: hsl(213, 9%, 39%);
+        margin: 0;
+        line-height: 30px; /*changed*/
     }
 
-    .client-name{
-        margin-top: 50px;
-        font-weight: 900;
-    }
-
-    .client-position{
-        font-size: 14px;
-        color: hsl(210, 4%, 67%);
-    }
-
-
-    /*footer-section*/
     footer{
-        width: 100%;
         height: 300px;
-        background-color: rgba(74, 197, 172, 0.6);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
     }
-
-    footer h3{
-        font-size: 30px;
-        font-weight: 900;
-        margin-top: 50px;
-        color: hsl(168, 34%, 41%);
-    }
-
-    .footer-menu a{
-        margin: 0 20px;
-        color: hsl(168, 34%, 41%);
-        text-decoration: none;
-    }
-
-    .footer-menu a:hover{
-        color: hsl(0, 0%, 100%);
-    }
-
-    .social-media .svg{
-        margin: 0 10px;
-    }
-
-    .social-media .svg:hover{
-        filter: brightness(0) invert(1);
-    }
-    
 }
 
 /******FROM 1440px - infinity******/
 @media screen and (min-width: 1440px) {
     
 
+}
+
+/******FROM 375px - 995px******/
+@media screen and (min-width: 375px) {
+    
 }
